@@ -1,0 +1,9 @@
+* Switching to 32-bit real mode
+
+  1.Disable the interrupt
+  2.Turn off paging
+    --Transfer control to 1:1 page
+    --Ensure that GDT and IDT are in 1:1 page
+    --Clear the PG-flag in the CR0
+    --Set CR3 to 0
+  3.Use GDT with 16-bit data and code segement

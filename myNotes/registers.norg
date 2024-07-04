@@ -1,0 +1,80 @@
+#REGISTERS
+    AX = Accumulator
+    BX = BASE
+    CX = Counter
+    DX = Data
+    SI = Source
+    DI = Destination
+    SP = Stack pointer (points to top of stack)
+    BP = Base Poninter (points to base of stack)
+
+    (_SP < BP_) this condition should be true in asm
+
+#MORE REGISTERS
+    IP = Pointer Register
+--  Points to next instruction
+    
+*   SEGMENT REGISTERS
+    address = SEGMENT * 16 + offset
+    CS = Code   Segement
+    DS = Data   Segement
+    ES = Extra  Segement
+    SS = Stack  Segement
+    FS = GENERAL PURPOSE
+    GS = GENERAL PURPOSE
+
+#PROTECTED REGISTER
+    *TABLE_REGISTERS*
+    GDTR    
+    LDTR
+    IDTR
+
+#CONTROL REGISTERS
+    *CR0*
+        BITS    LABEL   Description
+
+        0       PE      Protected Mode Enable
+        1       MP      Monitor co-processor
+        2       EM      x87 FPU Emulation
+        4       TS      Task switched
+        5       NE      Numeric Error
+        16      WP      Write project
+        18      AM      Alignment Mask
+        29      NW      Not-write through
+        30      CD      Cache Disable
+        31      PG      Paging
+
+    *CR1*   //Reserved
+    *CR2*
+    *CR3*
+    *CR4*   
+    *CR5*   //Reserved
+    *CR6*   //Reserved
+    *CR7*   //Reserved 
+    *CR8*
+    
+
+#EFLAGS Register
+    BITS    Label   Description
+
+    0       CF      Carry flag
+    2       PF      Parity flag
+    4       AF      Auxilaiary flag
+    6       ZF      Zero Flag
+    7       SF      Sign Flag
+    8       TF      Trap Flag
+    9       IF      Interupt Enable Flag
+    10      DF      Direction Flag
+    11      OF      Overflow Flag
+    12-13   IOPL    I/O Privilage flag
+    14      NT      Nested task
+    16      RF      Resume Flag
+    17      VM      Virtual 8086 mode flag
+    18      AC      Alignment check
+    19      VIF     Virtual Interupt flag
+    20      VIP     Virtual interrupt pending
+    21      ID      Able to use CPUID instruction
+
+
+
+
